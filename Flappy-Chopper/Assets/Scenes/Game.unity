@@ -344,6 +344,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rbVerticalVelocity: 6
+  spriteRenderer: {fileID: 872868825}
+  sprite:
+  - {fileID: 21300000, guid: fd4d1bc1d53a54a40915cc32c5039bb9, type: 3}
+  - {fileID: 21300000, guid: 3cda85fc59a1aeb4783df2e197edc60d, type: 3}
+  - {fileID: 21300000, guid: 2096adab9d8f8c04f80e5cf33fe1609d, type: 3}
 --- !u!1 &1235730070
 GameObject:
   m_ObjectHideFlags: 0
