@@ -2,7 +2,7 @@
 //01 08 2022
 //Lunedì
 //Animazione birdy 3 frame
-//Sostituito con rotazione flappy
+//Sostituito con rotazione flappye
 
 
 
