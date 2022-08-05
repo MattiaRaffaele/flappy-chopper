@@ -2,16 +2,14 @@ using UnityEngine;
 
 public class tubeManager : MonoBehaviour
 {
-    public static float tubeSpeed;
-
-    private void Awake() 
-    {
-        tubeSpeed = -5f;
-    }
     void Update()
     {
-        gameObject.transform.Translate (new Vector2 (tubeSpeed , 0f) * Time.deltaTime);
+        gameObject.transform.Translate (new Vector2 (-5f, 0f) * Time.deltaTime);
 
-        if (gameObject.transform.position.x <= -10f) Destroy(gameObject);
-    }
+        if (gameObject.transform.position.x <= -5f){
+            Vector2 SpawnPos = new Vector2 (5f, Random.Range(-2f, 2f));
+            gameObject.transform.position = SpawnPos;
+            return;
+        }
+    }  
 }
