@@ -13,6 +13,9 @@ public class gameManager : MonoBehaviour
 
     public GameObject gameoverUI;
 
+    [Header("Audio")]
+    public AudioSource gameoverAudio;
+
     Animator anim;
 
     private void Awake() {
@@ -23,6 +26,8 @@ public class gameManager : MonoBehaviour
     public void GameOver(){
 
         anim.Play("gameoverAnim");
+
+        gameoverAudio.Play();
 
         gameoverUI.SetActive(true);
 
