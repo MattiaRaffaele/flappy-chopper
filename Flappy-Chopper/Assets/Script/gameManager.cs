@@ -1,42 +1,40 @@
-using TMPro;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class gameManager : MonoBehaviour
 {
-
-    //public TMP_Text gameoverText;
-
-    public bool isDead;
 
     public GameObject tubi;
 
     public GameObject Player;
 
-    public TMP_Text gameoverText;
+    public GameObject gameoverText;
 
+    public GameObject animator;
+
+    public GameObject gameoverUI;
+
+    Animator anim;
 
     private void Awake() {
-        gameoverText.text = "";
-    }
-    
-    private void Update() {
-        if (isDead){
-            GameOver();
-        }
+        anim = animator.GetComponent<Animator>();
+        gameoverUI.SetActive(false);
     }
 
-    private void GameOver(){
+    public void GameOver(){
 
-        Debug.Log("GameOver initialized");
-        gameoverText.text = "Game Over";
+        anim.Play("gameoverAnim");
+
+        gameoverUI.SetActive(true);
 
         tubi.GetComponent<tubeManager>().enabled = false;
-        Debug.Log("Tubi disabled");
 
-        Player.GetComponent<playerScript>().enabled = false;
-        Debug.Log("Player disabled");
+        Destroy(Player);
+    }
 
-        Debug.Log("GameOver Successfully");
+    public void Replay(){
+
+        SceneManager.LoadScene(0);
+
     }
 
 }
