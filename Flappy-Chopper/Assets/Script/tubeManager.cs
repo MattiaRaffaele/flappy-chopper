@@ -15,8 +15,8 @@ public class tubeManager : MonoBehaviour
 
         //extra
         floor.transform.Translate (new Vector2 (-5f, 0f) * Time.deltaTime);
-        if (floor.transform.position.x == -4.50f){
-            floor.transform.position = new Vector2 (4.50f, 0f);
+        if (floor.transform.position.x <= -20f){
+            floor.transform.position = new Vector2 (0f, 0f);
             return;
         }
     }

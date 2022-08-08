@@ -13,19 +13,31 @@ public class gameManager : MonoBehaviour
 
     public GameObject gameoverUI;
 
+    public GameObject scoreText;
+
     [Header("Audio")]
     public AudioSource gameoverAudio;
 
     Animator anim;
+    Animator scoreAnim;
+
+
+
+    bool canExecute;
 
     private void Awake() {
         anim = animator.GetComponent<Animator>();
         gameoverUI.SetActive(false);
+        scoreAnim = scoreText.GetComponent<Animator>();
     }
+
+    
 
     public void GameOver(){
 
         anim.Play("gameoverAnim");
+
+        scoreAnim.Play("scoreAnimation");
 
         gameoverAudio.Play();
 
@@ -38,12 +50,18 @@ public class gameManager : MonoBehaviour
 
     public void Replay(){
 
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
 
     }
 
     public void mainMenu(){
         SceneManager.LoadScene(0);
+    }
+
+    //_______________Abilities_______________
+
+    void doublepointAbility(){
+        
     }
 
 }

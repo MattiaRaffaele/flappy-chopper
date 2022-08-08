@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7209106728130980242}
   - component: {fileID: 6918797310279930409}
+  - component: {fileID: 3115157642928734402}
   m_Layer: 0
   m_Name: scoreTrigger
   m_TagString: Untagged
@@ -42,7 +43,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.43668687}
@@ -58,6 +59,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.9408305}
   m_EdgeRadius: 0
+--- !u!114 &3115157642928734402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3866629845488498957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebd4e34bf6294394d8321be336082a7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
 --- !u!1 &7433862920690689822
 GameObject:
   m_ObjectHideFlags: 0

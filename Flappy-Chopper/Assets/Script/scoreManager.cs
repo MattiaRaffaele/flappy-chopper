@@ -11,6 +11,6 @@ public class scoreManager : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        score ++;
+        score += 1;
     }
 }

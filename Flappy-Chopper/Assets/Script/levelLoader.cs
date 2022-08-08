@@ -8,14 +8,14 @@ public class levelLoader : MonoBehaviour
     public Slider slider;
     
 
-    public void IniziaGioco(int sceneIndex)
+    public void Start()
     {
-        StartCoroutine(bobo(sceneIndex));
+        StartCoroutine(bobo());
     }
 
-    public IEnumerator bobo(int sceneIndex)
+    public IEnumerator bobo()
     {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
+        AsyncOperation operation = SceneManager.LoadSceneAsync(2);
 
         while (!operation.isDone)
         {
