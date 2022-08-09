@@ -35,6 +35,7 @@ public class gameManager : MonoBehaviour
         gameoverUI.SetActive(false);
         scoreAnim = scoreText.GetComponent<Animator>();
     }
+    
 
     
 

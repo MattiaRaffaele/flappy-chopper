@@ -8,6 +8,9 @@ public class playerScript : MonoBehaviour
     public float rbVerticalVelocity;
 
     private bool canJump;
+
+    [Header("Audio")]
+    public AudioSource jumpSound;
  
 
 
@@ -26,6 +29,8 @@ public class playerScript : MonoBehaviour
         if (canJump && Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) || Input.touchCount > 0)
         {           
             //rb jump
+            jumpSound.Play();
+
             rb.velocity = new Vector2(0f, rbVerticalVelocity);
 
             canJump = true;
