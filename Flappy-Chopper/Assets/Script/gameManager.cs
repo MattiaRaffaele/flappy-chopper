@@ -15,6 +15,9 @@ public class gameManager : MonoBehaviour
 
     public GameObject scoreText;
 
+    public GameObject abilityManager;
+
+
     [Header("Audio")]
     public AudioSource gameoverAudio;
 
@@ -22,10 +25,12 @@ public class gameManager : MonoBehaviour
     Animator scoreAnim;
 
 
-
+    public static bool isDead;
     bool canExecute;
 
-    private void Awake() {
+    private void Awake() 
+    {
+        isDead = false;
         anim = animator.GetComponent<Animator>();
         gameoverUI.SetActive(false);
         scoreAnim = scoreText.GetComponent<Animator>();
@@ -34,6 +39,8 @@ public class gameManager : MonoBehaviour
     
 
     public void GameOver(){
+
+        isDead = true;
 
         anim.Play("gameoverAnim");
 
