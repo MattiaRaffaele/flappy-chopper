@@ -57,11 +57,4 @@ public class gameManager : MonoBehaviour
     public void mainMenu(){
         SceneManager.LoadScene(0);
     }
-
-    //_______________Abilities_______________
-
-    void doublepointAbility(){
-        
-    }
-
 }
