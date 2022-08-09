@@ -19,7 +19,7 @@ public class abilityScript : MonoBehaviour
     void abilitySpawner(){
         spawnerNum = Random.Range(1,10);
         Debug.Log(spawnerNum);
-        if (spawnerNum == 2){
+        if (spawnerNum == 5){
             gameObject.transform.position = new Vector2 (Random.Range(8f, 16f), Random.Range(5f, -5f));
         }
     }
