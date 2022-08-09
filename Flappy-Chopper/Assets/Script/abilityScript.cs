@@ -12,17 +12,15 @@ public class abilityScript : MonoBehaviour
     {
         if (gameObject.transform.position.x <= -10f)
         {
+            spawnerNum = Random.Range(0, 10);
             abilitySpawner();
         }
     }
 
     void abilitySpawner(){
-        spawnerNum = Random.Range(1,10);
-        Debug.Log(spawnerNum);
-        if (spawnerNum == 5){
-            gameObject.transform.position = new Vector2 (Random.Range(8f, 16f), Random.Range(5f, -5f));
+        if (spawnerNum == 0){
+            Debug.Log(spawnerNum);
+            gameObject.transform.position = new Vector2 (5f, 0f);
         }
     }
-
-    
 }
