@@ -6,17 +6,21 @@ public class tubeManager : MonoBehaviour
     private int spawnerNum;
     public GameObject Ability;
     public float Speed;
-    public int spawnRandom;
+    int spawnRandom;
 
     [Header("Funzioni di debug")]
     public bool Testing;
     private int spawnNum2;
 
+    bool canSpawn;
+
 
 
     private void Awake() {
-        Ability.SetActive(false);
+        //Dichiarazioni
+        canSpawn = Ability.GetComponent<abilityTrigger>().canSpawn = true;
 
+        Ability.SetActive(false);
 
         //Funzioni di debug aggiuntive per i test
         if (Testing){
@@ -56,7 +60,7 @@ public class tubeManager : MonoBehaviour
         
         
 
-        if (spawnRandom == 1){
+        if (spawnRandom == 1 && canSpawn){
             Ability.SetActive(true);
         }
         else{

@@ -30,6 +30,10 @@ MonoBehaviour:
     m_Localized: MENU PRINCIPALE
     m_Metadata:
       m_Items: []
+  - m_Id: 169431074291712
+    m_Localized: DOPPI PUNTI!!!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
