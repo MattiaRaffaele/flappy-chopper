@@ -30,6 +30,7 @@ public class gameManager : MonoBehaviour
 
     private void Awake() 
     {
+        Time.timeScale = 1;
         isDead = false;
         anim = animator.GetComponent<Animator>();
         gameoverUI.SetActive(false);
