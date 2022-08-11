@@ -15,32 +15,32 @@ public class abilityTrigger : MonoBehaviour
     public GameObject player;
     public bool canSpawn = true;
 
-    Animator abAnim;
+    public Animator abAnim;
     public GameObject abilityTextGroup;
     public GameObject abilityText;
+
+    //Abilities text
+    [Header("Testi abilità")]
+    public GameObject doppipuntiText;
 
 
 
     private void Start() {
-        abAnim = abilityTextGroup.GetComponent<Animator>();
-        abilityText.SetActive(false);
+        doppipuntiText.SetActive(false);
     }
 
-
     private void OnTriggerEnter2D(Collider2D other) {
-
-        Debug.Log("Preso");
-
         if (other.gameObject.tag == "Player"){
-            
-            gameObject.transform.localScale = transform.localScale -= new Vector3 (0.5f, 0.5f, 0f);
+            //gameObject.transform.localScale = transform.localScale -= new Vector3 (0.5f, 0.5f, 0f);
+
             puntiDoppiAB();
         }
     }
 
-
     public void puntiDoppiAB(){
+        doppipuntiText.SetActive(true);
         abAnim.Play("abAnimation");
         scoreManager.GetComponent<scoreManager>().scoreState = 2;
+        doppipuntiText.SetActive(true);
     }
 }

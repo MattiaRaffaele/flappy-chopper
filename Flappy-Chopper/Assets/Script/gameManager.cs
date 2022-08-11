@@ -43,17 +43,17 @@ public class gameManager : MonoBehaviour
     public void GameOver(){
 
         isDead = true;
-
+        
         anim.Play("gameoverAnim");
-
+        
         scoreAnim.Play("scoreAnimation");
-
+        
         gameoverAudio.Play();
-
+        
         gameoverUI.SetActive(true);
-
+        
         tubi.GetComponent<tubeManager>().enabled = false;
-
+        
         Destroy(Player);
     }
 

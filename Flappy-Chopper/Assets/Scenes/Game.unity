@@ -2614,12 +2614,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   testing: 1
   "abilit\xE0Massime": 0
-  scoreManager: {fileID: 423338336}
+  scoreManager: {fileID: 5945707719337545891}
   Tubo: {fileID: 610647388}
   player: {fileID: 872868822}
   canSpawn: 0
+  abAnim: {fileID: 1723806572}
   abilityTextGroup: {fileID: 1723806570}
   abilityText: {fileID: 1723806570}
+  doppipuntiText: {fileID: 1751338839}
 --- !u!212 &1518871949
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3386,7 +3388,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1751338840}
   m_Father: {fileID: 1529325765}
@@ -3435,7 +3437,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1751338840
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3443,17 +3445,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751338839}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.010007971, w: 0.99995}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1723806571}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.0000038146973}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1682.4673, y: 182.4542}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1751338841
@@ -3531,8 +3533,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 125
+  m_fontSizeBase: 125
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
